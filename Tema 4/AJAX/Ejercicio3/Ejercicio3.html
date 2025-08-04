@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>xkcd simple</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+    img { max-width: 100%; margin-top: 20px; }
+    #error { color: red; }
+  </style>
+</head>
+<body>
+  <h1>xkcd Viewer</h1>
+  <input type="number" id="comicNumber" placeholder="Número de cómic" min="1" />
+  <button onclick="loadComic()">Cargar</button>
+
+  <div id="comicInfo"></div>
+  <p id="error"></p>
+
+  <script src="Ejercicio3.js"></script>
+</body>
+</html>
