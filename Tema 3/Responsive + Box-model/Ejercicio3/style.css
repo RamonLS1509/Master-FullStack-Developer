@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #ffffff;
+    background-color: #1e1e1e;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    max-width: 100%;
+    margin-left: 1.5rem;
+}
+
+.container__title {
+    display: flex;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    position: relative;
+    bottom: .5rem;
+}
+
+.container__subtitle {
+    display: flex;
+    color: grey;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    position: relative;
+    bottom: 1rem;
+}
+
+.container__info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+img {
+    width: 15rem;
+}
+
+p {
+
+    color: grey;
+}
+
+button {
+    max-width: 10%;
+    background-color: #2e2e2e;
+    color: white;
+    border: 1px solid #aaaaaa;
+    border-radius: 8px;
+    padding: 0.625rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 20rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: nowrap;
+    min-width: fit-content;
+
+}
+
+@media (min-width:720px) {
+    .container__title {
+        display: flex;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        position: relative;
+        bottom: .5rem;
+        margin: 2rem 2rem 0 2rem;
+    }
+
+    .container__subtitle {
+        display: flex;
+        color: grey;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+        position: relative;
+        bottom: 1rem;
+        margin: 1rem 2rem 2rem 2rem;
+    }
+
+    .container__info {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        border: 1px solid #333;
+        border-radius: 0.5rem;
+        margin: 2rem;
+        color: #fff;
+    }
+
+    button {
+        white-space: nowrap;
+        min-width: fit-content;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    img {
+        padding: 1rem;
+    }
+
+}

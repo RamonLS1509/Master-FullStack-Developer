@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+    }
+    h1 {
+      text-align: center;
+    }
+    .contenedor {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .tarjeta {
+      border: 1px solid #333;
+      border-radius: 8px;
+      width: 250px;
+      padding: 10px;
+      text-align: center;
+      background: #fff;
+      transition: background 0.3s;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+    }
+    .tarjeta img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+    .tarjeta button {
+      margin-top: 10px;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: #333;
+      color: white;
+      font-size: 14px;
+    }
+    .tarjeta button:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+    <h1>Planetas seleccionados</h1>
+  <div class="contenedor" id="resultado"></div>
+
+    <script src="sistemasolar.js"></script>
+</body>
+</html>

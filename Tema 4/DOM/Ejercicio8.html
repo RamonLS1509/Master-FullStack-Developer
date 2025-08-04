@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alquiler de coches</title>
+</head>
+<body>
+    <div id="main"></div>
+
+    <script>
+        const edad = Number(prompt("Introduce tu edad"));
+        const tieneCarnet = prompt("¿Tienes carnet de conducir? (S/N)").toUpperCase();
+        const listado = document.getElementById('main');
+
+        if (edad < 18) {
+            listado.innerHTML = "<p style='color:red;'>No puedes alquilar un coche porque eres menor de edad.</p>";
+        } else if (tieneCarnet === 'N') {
+            listado.innerHTML = "<p style='color:red;'>No puedes alquilar un coche porque no tienes carnet de conducir.</p>";
+        } else {
+            const nombre = prompt("Introduce tu nombre");
+            const apellido = prompt("Introduce tu apellido");
+            const ciudad = prompt("Introduce la ciudad de recogida del vehículo");
+            const diasAlquiler = Number(prompt("Introduce el número de días que quieres alquilar el coche"));
+
+            let costeTotal;
+            if (diasAlquiler >= 7) {
+                const semanas = Math.floor(diasAlquiler / 7);
+                const diasRestantes = diasAlquiler % 7;
+                costeTotal = (semanas * 150) + (diasRestantes * 25);
+            } else {
+                costeTotal = diasAlquiler * 25;
+            }
+
+            listado.innerHTML = `
+                <h2>Datos del cliente</h2>
+                <ul>
+                    <li>Nombre: ${nombre}</li>
+                    <li>Apellidos: ${apellido}</li>
+                    <li>Ciudad de recogida: ${ciudad}</li>
+                    <li>Días de alquiler: ${diasAlquiler}</li>
+                    <li><strong>Coste total: ${costeTotal} €</strong></li>
+                </ul>
+            `;
+        }
+    </script>
+</body>
+</html>

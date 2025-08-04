@@ -1,0 +1,45 @@
+.carousel-item img {
+    max-height: 31rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+.first {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.second {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.third {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: right;
+}
+
+.card-deck{
+    border-bottom:1px solid black;
+}
+
+.card{
+    margin-top:3rem;
+    border: none;
+}
+
+
+
+
+.card-body {
+    text-align: center;
+}

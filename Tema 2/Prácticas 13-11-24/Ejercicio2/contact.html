@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">Esta es mi página de contacto del Ejercicio 1</h1>
+        <nav class="header__navigator">
+            <a class="header__navigator-link" href="index.html">Inicio</a>
+            <a class="header__navigator-link" href="services.html">Servicios</a>
+            <a class="header__navigator-link" href="contact.html">Contacto</a>
+        </nav>
+    </header>
+    <main class="contact">
+        <form action="#" method="post" class="contact__form">
+            <label for="name" class="contact__form-name">Nombre:</label><br />
+            <input type="text" id="name" name="name" required /><br /><br />
+
+            <label for="email" class="contact__form-email">Correo Electrónico:</label><br />
+            <input type="email" id="email" name="email" required /><br /><br />
+
+            <label for="message" class="contact__form-message">Mensaje:</label><br />
+            <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer class="footer">
+        <p class="footer__copyright">&copy; 2025 Nuestra Empresa</p>
+    </footer>
+</body>
+</html>

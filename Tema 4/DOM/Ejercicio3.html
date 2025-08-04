@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+
+    </div>
+
+
+    <script>
+        const nombre = prompt("Introduce tu nombre");
+        const edad = Number(prompt("Introduce tu edad"));
+
+        const main = document.getElementById('main')
+
+    //Metodo IF:
+        // if(edad < 18){
+        //     main.innerHTML = `Hola ${nombre}, eres menor de edad`
+        // }else{
+        //     main.innerHTML = `Hola ${nombre}, eres mayor de edad`
+        // }
+
+    
+    //Metodo SWITCH:
+        // switch(true){
+        //     case edad < 18 :
+        //         main.innerHTML = `Hola ${nombre}, eres menor de edad`
+        //         break;
+        //     case edad >= 18 : 
+        //         main.innerHTML = `Hola ${nombre}, eres mayor de edad`
+        //         break;
+        // }
+
+    //Metodo CONDICIONAL TERNARIO
+        // main.innerHTML = `Hola ${nombre}, ${edad < 18 ? 'eres menor de edad' : 'eres mayor de edad'}`;
+
+    </script>
+</body>
+</html>

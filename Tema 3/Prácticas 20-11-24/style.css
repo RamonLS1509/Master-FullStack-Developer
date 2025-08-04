@@ -1,0 +1,125 @@
+body {
+    background-color: #212121;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*H1 de la página*/
+.button_title {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    text-align: center;
+    color:#ffffff
+}
+
+/*Div principal de la página*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    /* 20px */
+    justify-content: space-between;
+}
+
+/* Div para cada uno de los elementos */
+.container__button {
+    flex: 1;
+    padding: 5rem;
+    text-align: center;
+    min-width: 12.5rem;
+}
+
+/* Boton de suscribe */
+.button__subscribe {
+    color: #D1B87F;
+    border: 0.16rem solid #D1B87F;
+    border-radius: 83.25rem;
+    background-color: transparent;
+    padding: 1rem 1rem 0.8rem 1rem;
+    cursor: pointer;
+    width: 100%;
+    max-width: 100px;
+}
+
+/* Boton de Happy */
+.button__happy {
+    color: #fff;
+    background-color: #222229;
+    border: 0.25rem solid white;
+    padding: 1rem 1.5rem 0.6rem 1.5rem;
+    cursor: pointer;
+    width: 100%;
+    max-width: 100px;
+}
+
+/* Boton de Anatomy */
+.button__anatomy {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.66rem;
+    padding: 1rem 1rem;
+    background-image: linear-gradient(#3470fa, #313ed7);
+    color: white;
+    border: 0.08rem solid #103fff;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    max-width: 150px;
+}
+
+/* Div del encabezado del chat */
+.container__button_subtitle {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+/* Subtitulo del chat */
+.container__button_subtitle h2 {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 100;
+}
+
+/* Div del contenido del chat */
+.container__button_message {
+    background-color: #ffffff;
+    padding: 3rem 1rem;
+    min-height: 8rem;
+    padding-top: 5rem;
+}
+
+/* Div del input del chat */
+.container__button_input {
+    border-top: 0.08rem solid #333;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+
+}
+
+/* Input para escribir el mensage */
+.message-input {
+    flex: 1;
+    border: none;
+    font-size: 1rem;
+    max-width: 100%;
+}
+
+/* Boton para enviar el mensaje */
+.send-button {
+    background-color: #333;
+    color: white;
+    padding: 0.6rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.3rem;
+
+}

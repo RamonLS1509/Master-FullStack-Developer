@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+
+    </div>
+    
+
+    <script>
+        const operacion = Number(prompt("Introduce una operacion: \n1. Suma \n2. Resta \n3. Multiplicación \n4. Division \n5. Resto"))
+        const numero1 = Number(prompt("Introduce un numero"));
+        const numero2 = Number(prompt("Introduce otro numero"));
+
+        const parrafo = `Los dos numeros elegidos son: ${numero1} y ${numero2}`
+
+        switch(true){
+            case operacion === 1:
+                const suma =`<p>La suma es ${numero1 + numero2}</p>`
+                main.innerHTML = suma;
+                break;
+            case operacion === 2:
+                const resta =`<p>La resta es ${numero1 - numero2}</p>`
+                main.innerHTML = resta;
+                break;
+            case operacion === 3:
+                const mult =`<p>La multiplicacion es ${numero1 * numero2}</p>`
+                main.innerHTML = mult;
+                break;
+            case operacion === 4:
+                const divi =`<p>La division es ${numero1 / numero2}</p>`
+                main.innerHTML = divi;
+                break;
+            case operacion === 5:
+                const mod =`<p>El módulo es ${numero1 % numero2}</p>`
+                main.innerHTML = mod;
+                break;
+            default:
+                main.innerHTML = `No se ha introducido ninguna operación valida`
+        }
+    </script>
+</body>
+</html>

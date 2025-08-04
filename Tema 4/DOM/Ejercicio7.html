@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const body = document.querySelector('body')
+
+        const nav = `<header>
+        <nav id="navigator">
+        <a href="#div1">Ir al div1</a>
+        <a href="#div2">Ir al div2</a>
+        <a href="#div3">Ir al div3</a>
+        </nav>
+        </header>`;
+
+        const main = `<main>
+        <div id="div1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, nemo libero, accusamus sit
+            iusto saepe, minus porro nesciunt ab doloremque culpa praesentium natus at id quae laboriosam laborum qui
+            quis?
+            Sint, nemo molestiae velit asperiores saepe est obcaecati assumenda adipisci voluptas ab, perspiciatis
+            quibusdam id aperiam, at et vel autem unde natus nostrum cumque exercitationem nulla quos accusantium quam.
+            Nobis!
+            Fuga vitae, ex nesciunt vel amet ipsam labore dolores, quia in provident assumenda doloribus quam asperiores
+            molestias quis vero, reprehenderit corrupti ea minus quisquam. Dolorum est mollitia accusantium. Dolores,
+            eaque.</div>
+        <div id="div2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, nemo libero, accusamus sit
+            iusto saepe, minus porro nesciunt ab doloremque culpa praesentium natus at id quae laboriosam laborum qui
+            quis?
+            Sint, nemo molestiae velit asperiores saepe est obcaecati assumenda adipisci voluptas ab, perspiciatis
+            quibusdam id aperiam, at et vel autem unde natus nostrum cumque exercitationem nulla quos accusantium quam.
+            Nobis!
+            Fuga vitae, ex nesciunt vel amet ipsam labore dolores, quia in provident assumenda doloribus quam asperiores
+            molestias quis vero, reprehenderit corrupti ea minus quisquam. Dolorum est mollitia accusantium. Dolores,
+            eaque.</div>
+        <div id="div3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, nemo libero, accusamus sit
+            iusto saepe, minus porro nesciunt ab doloremque culpa praesentium natus at id quae laboriosam laborum qui
+            quis?
+            Sint, nemo molestiae velit asperiores saepe est obcaecati assumenda adipisci voluptas ab, perspiciatis
+            quibusdam id aperiam, at et vel autem unde natus nostrum cumque exercitationem nulla quos accusantium quam.
+            Nobis!
+            Fuga vitae, ex nesciunt vel amet ipsam labore dolores, quia in provident assumenda doloribus quam asperiores
+            molestias quis vero, reprehenderit corrupti ea minus quisquam. Dolorum est mollitia accusantium. Dolores,
+            eaque.</div>
+    </main>`
+
+    const footer = `<footer>
+        <a href="#navigator">Ir al principio</a>
+    </footer>`
+
+    body.innerHTML = nav + main + footer;
+
+    </script>
+</body>
+
+</html>
