@@ -4,16 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <!-- Links de Bootstrap -->
+    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <!-- Link del fichero css utilizado -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <!-- Seccion navbar -->
+    <!-- Navbar -->
     <nav class="navbar_section navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -25,13 +23,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Inicio</a>
+                        <a class="nav-link" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="ranking.html">Ranking</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
+                        <a class="nav-link active" href="contacto.html">Contacto</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="cookies.html">Cookies</a>
@@ -41,37 +39,51 @@
         </div>
     </nav>
 
-    <!--Seccion Hero -->
+    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container hero-content">
-            <h1 class="display-4 fw-lighter mb-4">Descubre los mejores videojuegos</h1>
-            <p class="lead mb-5">Explora, comparte y disfruta de la mejor experiencia gaming</p>
+            <h1 class="display-4 fw-lighter mb-4">Contáctanos</h1>
         </div>
     </section>
 
-    <!-- Seccion de tendencias -->
-    <section class="seccion_tendencias py-5">
-        <div class="container">
-            <h2 class="section_subtitle fw-bold">Tendencias</h2>
-            <div class="row" id="gameTendencia">
+    <!-- Contact Form -->
+    <section class="py-5">
+        <div class="form-content">
+            <h2 class="section_subtitle">Envíanos un mensaje</h2>
+            <form id="formulario">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required>
 
 
-            </div>
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Tu email" required>
+
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="123-123-123"
+                    pattern="[6-9][0-9]{8}" required>
+
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="********" required>
+
+                <label for="edad">Edad</label>
+                <input type="number" id="edad" name="edad" min="0" max="100" required>
+
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="6" placeholder="Escribe tu mensaje aquí"
+                    required></textarea>
+
+                <button type="submit" class="btn btn-primary btn-md px-4 me-2">Enviar</button>
+            </form>
         </div>
     </section>
 
-    <!-- Seccion de nuevos lanzamientos -->
-    <section class="seccion_nuevos_lanzamientos py-5 bg-dark">
-        <div class="container">
-            <h2 class="section_subtitle fw-bold">Nuevos Lanzamientos</h2>
-            <div class="row" id="gameLanzamientos">
 
 
-            </div>
-        </div>
-    </section>
 
-    <!-- Seccion de footer -->
+    <!-- Footer -->
     <footer class="seccion_footer py-5">
         <div class="container">
             <div class="row">
@@ -113,11 +125,7 @@
         </div>
     </footer>
 
-
-    <!--Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Link del Javascript utilizado -->
     <script src="js/script.js"></script>
 </body>
-
 </html>
