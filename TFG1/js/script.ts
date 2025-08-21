@@ -135,16 +135,23 @@ function rankingGames() {
       //Para crear las lista de juegos mostrando una lista enumerada del 1 al 20, el nombre y la puntuación en metacritic
       juegos.forEach((game, index) => {
         const cardHTML = `
-          <tr>
-            <td class="position">${index + 1}</td>
-            <td class="nombre">${game.name}</td>
-            <td class="points">${game.metacritic ?? "N/A"}</td>
-          </tr>`;
+           <tr>
+             <td data-label="Puesto">${index + 1}</td>
+             <td data-label="Juego" class="text-start">
+               <img src="${game.background_image}" class="img-fluid rounded" width="80">
+               ${game.name}
+             </td>
+             <td data-label="Fecha de salida">${game.released}</td>
+             <td data-label="Plataformas">${game.parent_platforms?.map(p => p.platform.name).join(', ') || 'Sin plataforma'}</td>
+             <td data-label="Metacritic">${game.metacritic ?? "N/A"}</td>
+           </tr>`;
         ranking.innerHTML += cardHTML;
       });
     })
     .catch(err => console.error("Error cargando juegos:", err));
 }
+
+
 
 //Función para customizar los mensajes del formulario
 function customMessages() {
@@ -225,8 +232,6 @@ function customMessages() {
   mensaje.addEventListener("input", () => {
     mensaje.setCustomValidity(""); 
   });
-
-
 }
 
 

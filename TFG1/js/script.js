@@ -90,8 +90,8 @@ function rankingGames() {
         ranking.innerHTML = '';
         //Para crear las lista de juegos mostrando una lista enumerada del 1 al 20, el nombre y la puntuación en metacritic
         juegos.forEach(function (game, index) {
-            var _a;
-            var cardHTML = "\n          <tr>\n            <td class=\"position\">".concat(index + 1, "</td>\n            <td class=\"nombre\">").concat(game.name, "</td>\n            <td class=\"points\">").concat((_a = game.metacritic) !== null && _a !== void 0 ? _a : "N/A", "</td>\n          </tr>");
+            var _a, _b;
+            var cardHTML = "\n           <tr>\n             <td data-label=\"Puesto\">".concat(index + 1, "</td>\n             <td data-label=\"Juego\" class=\"text-start\">\n               <img src=\"").concat(game.background_image, "\" class=\"img-fluid rounded\" width=\"80\">\n               ").concat(game.name, "\n             </td>\n             <td data-label=\"Fecha de salida\">").concat(game.released, "</td>\n             <td data-label=\"Plataformas\">").concat(((_a = game.parent_platforms) === null || _a === void 0 ? void 0 : _a.map(function (p) { return p.platform.name; }).join(', ')) || 'Sin plataforma', "</td>\n             <td data-label=\"Metacritic\">").concat((_b = game.metacritic) !== null && _b !== void 0 ? _b : "N/A", "</td>\n           </tr>");
             ranking.innerHTML += cardHTML;
         });
     })
