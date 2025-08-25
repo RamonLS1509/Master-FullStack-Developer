@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 //Función para mostrar un listado de 4 juegos en tendencias
-function gamesTendencias() {
+function gamesTendencias():void {
   callGamesList
     .then(datos => {
       if (!datos) return;
@@ -78,7 +78,7 @@ function gamesTendencias() {
 }
 
 //Función para mostrar los proximos lanzamientos en videojuegos
-function gamesLanzamientos() {
+function gamesLanzamientos():void {
   //Para mostrar los juegos que se encuentran entre las fechas comprendidas ordenandolas por fecha de salida proxima
   const url = 'https://api.rawg.io/api/games?key=5d746359116244ab9b01714c64813905&dates=2025-01-01,2025-11-30&ordering=-released&page_size=8';
 
@@ -124,7 +124,7 @@ function gamesLanzamientos() {
 }
 
 //Función para mostrar un ranking de 20 videojuegos ordenados de mayor a menor según la puntuación de metacritic
-function rankingGames() {
+function rankingGames():void {
   callGamesList
     .then(datos => {
       if (!datos) return;
@@ -136,14 +136,14 @@ function rankingGames() {
       juegos.forEach((game, index) => {
         const cardHTML = `
            <tr>
-             <td data-label="Puesto">${index + 1}</td>
-             <td data-label="Juego" class="text-start">
-               <img src="${game.background_image}" class="img-fluid rounded" width="80">
-               ${game.name}
+             <td class="seccion_celda__puesto" data-label="Puesto">${index + 1}</td>
+             <td class="seccion_celda__juego" data-label="Juego" class="text-start">
+               <img src="${game.background_image}" class="seccion_celda__imagen img-fluid rounded" style="width:80;">
+               <p>${game.name}</p>
              </td>
-             <td data-label="Fecha de salida">${game.released}</td>
-             <td data-label="Plataformas">${game.parent_platforms?.map(p => p.platform.name).join(', ') || 'Sin plataforma'}</td>
-             <td data-label="Metacritic">${game.metacritic ?? "N/A"}</td>
+             <td class="seccion_celda__fecha" data-label="Fecha de salida">${game.released}</td>
+             <td class="seccion_celda__plataforma" data-label="Plataformas">${game.parent_platforms?.map(p => p.platform.name).join(', ') || 'Sin plataforma'}</td>
+             <td class="seccion_celda__metacritic" data-label="Metacritic">${game.metacritic ?? "N/A"}</td>
            </tr>`;
         ranking.innerHTML += cardHTML;
       });
@@ -154,12 +154,12 @@ function rankingGames() {
 
 
 //Función para customizar los mensajes del formulario
-function customMessages() {
+function customMessages():void {
 
   //Mensaje del nombre
   nombre.addEventListener("invalid", () => {
     if (nombre.value === "") {
-      nombre.setCustomValidity("Por favor, escribe tu nombre");
+      nombre.setCustomValidity("Por favor, introduzca su nombre");
     }
   });
 
@@ -170,7 +170,7 @@ function customMessages() {
   //Mensaje del apellido
   apellido.addEventListener("invalid", () => {
     if (apellido.value === "") {
-      apellido.setCustomValidity("Por favor, escribe tus apellidos");
+      apellido.setCustomValidity("Por favor, escriba sus dos apellidos");
     }
   });
 
@@ -181,7 +181,7 @@ function customMessages() {
   //Mensaje del email
   email.addEventListener("invalid", () => {
     if (email.value === "") {
-      email.setCustomValidity("Por favor, escribe tu email");
+      email.setCustomValidity("Por favor, escriba su email");
     }
   });
 
@@ -192,7 +192,7 @@ function customMessages() {
   //Mensaje del telefono
   telefono.addEventListener("invalid", () => {
     if (telefono.value === "") {
-      telefono.setCustomValidity("Por favor, escribe tu telefono [xxx-xxx-xxx]");
+      telefono.setCustomValidity("Por favor, escriba su telefono [xxx-xxx-xxx]");
     }
   });
 
@@ -203,7 +203,7 @@ function customMessages() {
   //Mensaje de la contraseña
   password.addEventListener("invalid", () => {
     if (password.value === "") {
-      password.setCustomValidity("Por favor, escribe una contraseña valida");
+      password.setCustomValidity("Por favor, escriba una contraseña valida");
     }
   });
 
@@ -214,7 +214,7 @@ function customMessages() {
   //Mensaje de la edad
   edad.addEventListener("invalid", () => {
     if (edad.value === "") {
-      edad.setCustomValidity("Por favor, escribe una edad entre 0 y 100");
+      edad.setCustomValidity("Por favor, escriba una edad entre 0 y 100");
     }
   });
 
@@ -225,7 +225,7 @@ function customMessages() {
   //Mensaje del textarea
   mensaje.addEventListener("invalid", () => {
     if (mensaje.value === "") {
-      mensaje.setCustomValidity("Por favor, escribe un mensaje");
+      mensaje.setCustomValidity("Por favor, escriba un mensaje");
     }
   });
 
@@ -234,9 +234,17 @@ function customMessages() {
   });
 }
 
+function toggleBanner():void {
+  const banner = document.getElementById('miBanner') as HTMLElement | null;
+  if (banner) {
+    banner.style.display = 'none';
+  }
+}
+
 
 //Inicialización de las funciones de la app
 gamesTendencias();
 gamesLanzamientos();
 rankingGames();
-customMessages();;
+customMessages();
+toggleBanner();

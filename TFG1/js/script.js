@@ -91,7 +91,7 @@ function rankingGames() {
         //Para crear las lista de juegos mostrando una lista enumerada del 1 al 20, el nombre y la puntuación en metacritic
         juegos.forEach(function (game, index) {
             var _a, _b;
-            var cardHTML = "\n           <tr>\n             <td data-label=\"Puesto\">".concat(index + 1, "</td>\n             <td data-label=\"Juego\" class=\"text-start\">\n               <img src=\"").concat(game.background_image, "\" class=\"img-fluid rounded\" width=\"80\">\n               ").concat(game.name, "\n             </td>\n             <td data-label=\"Fecha de salida\">").concat(game.released, "</td>\n             <td data-label=\"Plataformas\">").concat(((_a = game.parent_platforms) === null || _a === void 0 ? void 0 : _a.map(function (p) { return p.platform.name; }).join(', ')) || 'Sin plataforma', "</td>\n             <td data-label=\"Metacritic\">").concat((_b = game.metacritic) !== null && _b !== void 0 ? _b : "N/A", "</td>\n           </tr>");
+            var cardHTML = "\n           <tr>\n             <td class=\"seccion_celda__puesto\" data-label=\"Puesto\">".concat(index + 1, "</td>\n             <td class=\"seccion_celda__juego\" data-label=\"Juego\" class=\"text-start\">\n               <img src=\"").concat(game.background_image, "\" class=\"seccion_celda__imagen img-fluid rounded\" style=\"width:80;\">\n               <p>").concat(game.name, "</p>\n             </td>\n             <td class=\"seccion_celda__fecha\" data-label=\"Fecha de salida\">").concat(game.released, "</td>\n             <td class=\"seccion_celda__plataforma\" data-label=\"Plataformas\">").concat(((_a = game.parent_platforms) === null || _a === void 0 ? void 0 : _a.map(function (p) { return p.platform.name; }).join(', ')) || 'Sin plataforma', "</td>\n             <td class=\"seccion_celda__metacritic\" data-label=\"Metacritic\">").concat((_b = game.metacritic) !== null && _b !== void 0 ? _b : "N/A", "</td>\n           </tr>");
             ranking.innerHTML += cardHTML;
         });
     })
@@ -102,7 +102,7 @@ function customMessages() {
     //Mensaje del nombre
     nombre.addEventListener("invalid", function () {
         if (nombre.value === "") {
-            nombre.setCustomValidity("Por favor, escribe tu nombre");
+            nombre.setCustomValidity("Por favor, introduzca su nombre");
         }
     });
     nombre.addEventListener("input", function () {
@@ -111,7 +111,7 @@ function customMessages() {
     //Mensaje del apellido
     apellido.addEventListener("invalid", function () {
         if (apellido.value === "") {
-            apellido.setCustomValidity("Por favor, escribe tus apellidos");
+            apellido.setCustomValidity("Por favor, escriba sus dos apellidos");
         }
     });
     apellido.addEventListener("input", function () {
@@ -120,7 +120,7 @@ function customMessages() {
     //Mensaje del email
     email.addEventListener("invalid", function () {
         if (email.value === "") {
-            email.setCustomValidity("Por favor, escribe tu email");
+            email.setCustomValidity("Por favor, escriba su email");
         }
     });
     email.addEventListener("input", function () {
@@ -129,7 +129,7 @@ function customMessages() {
     //Mensaje del telefono
     telefono.addEventListener("invalid", function () {
         if (telefono.value === "") {
-            telefono.setCustomValidity("Por favor, escribe tu telefono [xxx-xxx-xxx]");
+            telefono.setCustomValidity("Por favor, escriba su telefono [xxx-xxx-xxx]");
         }
     });
     telefono.addEventListener("input", function () {
@@ -138,7 +138,7 @@ function customMessages() {
     //Mensaje de la contraseña
     password.addEventListener("invalid", function () {
         if (password.value === "") {
-            password.setCustomValidity("Por favor, escribe una contraseña valida");
+            password.setCustomValidity("Por favor, escriba una contraseña valida");
         }
     });
     password.addEventListener("input", function () {
@@ -147,7 +147,7 @@ function customMessages() {
     //Mensaje de la edad
     edad.addEventListener("invalid", function () {
         if (edad.value === "") {
-            edad.setCustomValidity("Por favor, escribe una edad entre 0 y 100");
+            edad.setCustomValidity("Por favor, escriba una edad entre 0 y 100");
         }
     });
     edad.addEventListener("input", function () {
@@ -156,16 +156,22 @@ function customMessages() {
     //Mensaje del textarea
     mensaje.addEventListener("invalid", function () {
         if (mensaje.value === "") {
-            mensaje.setCustomValidity("Por favor, escribe un mensaje");
+            mensaje.setCustomValidity("Por favor, escriba un mensaje");
         }
     });
     mensaje.addEventListener("input", function () {
         mensaje.setCustomValidity("");
     });
 }
+function toggleBanner() {
+    var banner = document.getElementById('miBanner');
+    if (banner) {
+        banner.style.display = 'none';
+    }
+}
 //Inicialización de las funciones de la app
 gamesTendencias();
 gamesLanzamientos();
 rankingGames();
 customMessages();
-;
+toggleBanner();
