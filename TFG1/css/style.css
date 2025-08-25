@@ -1,4 +1,5 @@
 /* ----------------- Estilos base (MÓVIL PRIMERO) ------------------ */
+/* Estilos para la pagina global */
 body {
     font-family: 'Segoe UI', Tahoma, sans-serif;
     background-color: #121212;
@@ -6,27 +7,35 @@ body {
     padding-top: 3.5rem;
 }
 
-/* Navbar */
+/* ----------------- Navbar ------------------ */
+/* Estilo global para el navbar */
 .navbar_section {
     background-color: #0D0D0DF2;
     border-bottom: 1px solid #6c5ce7;
 }
+
+/* Estilo para el icono del navbar */
 .navbar-brand i {
     font-weight: 700;
     color: #6c5ce7;
 }
+
+/* Estilo para los enlaces del navbar */
 .nav-link {
     color: #f8f9fa;
     font-weight: 500;
     margin: 0 0.3rem;
     transition: all 0.3s;
 }
+
+/* Efecto hover para los enlaces del navbar */
 .nav-link:hover {
     color: #00cec9;
     transform: translateY(0.125rem);
 }
 
-/* Hero */
+/* ----------------- Hero section ------------------ */
+/* Estilo global para la seccion hero */
 .hero-section {
     background: linear-gradient(#000000B3, #000000B3),
         url('../images/hero_image.jpeg') no-repeat center center;
@@ -37,32 +46,40 @@ body {
     text-align: center;
 }
 
-/* Subtítulos */
+/* Estilo para los subtitulos */
 .section_subtitle {
     margin-bottom: 2.5rem;
     color: #6c5ce7;
     text-align: center;
 }
 
-/* Footer */
+/* ----------------- Footer section ------------------ */
+/* Estilo global para el footer */
 .seccion_footer {
     border-top: 1px solid #6c5ce7;
 }
+
+/* Estilo para los enlaces del footer (Redes sociales) */
 .seccion_redes a {
     font-size: 1.5rem;
     color: #f8f9fa;
     margin: 0 0.625rem;
     transition: all 0.3s;
 }
+
+/* Efecto hover para los enlaces de las redes sociales */
 .seccion_redes a:hover {
     color: #00cec9;
     transform: translateY(-0.1875rem);
 }
+
+/* Estilo para quitar el subrayado del boton enviar */
 .input-group a {
     text-decoration: none;
 }
 
-/* Game cards */
+/* ----------------- Game cards ------------------ */
+/* Estilo global para las cartas de los videojuegos */
 .game-card {
     background-color: #2d3436;
     border-radius: 0.625rem;
@@ -71,34 +88,47 @@ body {
     border: 1px solid #FFFFFF1A;
     margin-bottom: 1.25rem;
 }
+
+/* Efecto hover para las cartas de los videojuegos */
 .game-card:hover {
     transform: translateY(-0.625rem);
     box-shadow: 0 0.625rem 1.25rem #6C5CE74D;
 }
+
+/* Estilo para las imagenes de los videojuegos de las cartas */
 .game-img {
     height: 12.5rem;
     object-fit: cover;
     width: 100%;
 }
+
+/* Estilo para las plataformas a las que pertenecen los videojuegos */
 .badge-platform {
     background-color: #00cec9;
     white-space: normal;
 }
+
+/* Estilo para el nombre de los videojuegos */
 .game-title {
     color: #6c5ce7;
     font-weight: 700;
 }
 
-/* ----------------- TABLA COMO TARJETAS (MÓVIL) ------------------ */
+/* -----------------           TABLA RANKING       ------------------ */
+/* Estilo global para la tabla del ranking */
 table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 0.5rem;
     font-family: "Poppins", sans-serif;
 }
+
+/* Estilo para el encabezado de la tabla */
 .table thead {
     display: none;
 }
+
+/* Estilo para las filas de la tabla */
 tbody tr {
     display: block;
     background: #1e1e1e;
@@ -107,26 +137,14 @@ tbody tr {
     margin-bottom: 1rem;
     padding: 0.75rem;
 }
+
+/* Estilo para las celdas de la tabla */
 tbody td {
     display: block;
     padding: 0.3rem 0;
     border: none;
 }
 
-/* Puesto y nombre juntos */
-.seccion_puesto,
-.seccion_juego {
-    display: inline-block;
-    vertical-align: middle;
-}
-.seccion_puesto {
-    font-weight: bold;
-    margin-right: 0.5rem;
-}
-.seccion_juego {
-    font-size: 1rem;
-    font-weight: 500;
-}
 
 /* Imagen del juego */
 .seccion_celda__imagen {
@@ -137,13 +155,21 @@ tbody td {
     border-radius: 0.4rem;
 }
 
-/* Formularios */
+/* -----------------           FORMULARIOS       ------------------ */
+/* Estilo global para el formulario */
 .form-content {
     max-width: 30rem;
-    margin: auto;
+    margin: 1.5rem;
     text-align: left;
 }
-#name, #apellido, #email, #telefono, #password, #edad, #message {
+/* Estilo para los inputs del formulario */
+#name,
+#apellido,
+#email,
+#telefono,
+#password,
+#edad,
+#message {
     width: 100%;
     padding: 0.625rem;
     margin-bottom: 0.9375rem;
@@ -153,22 +179,26 @@ tbody td {
     border-radius: 0.3125rem;
 }
 
-/* Cookies */
+/* -----------------           COOKIES       ------------------ */
+/* Estilo general para las cookies */
 .cookies_content {
     max-width: 50rem;
     margin: auto;
 }
+/* Estilo para los subtitulos */
 .cookies_content h3 {
     font-size: 1.25rem;
     margin-top: 1.5rem;
     color: #0d6efd;
 }
+/* Estilo para los parrafos */
 .cookies_content p {
     line-height: 1.6;
     margin-bottom: 1rem;
 }
 
-/* Banner Newsletter */
+/* -----------------           BANNER NEWSLETTER       ------------------ */
+/* Estilo general para el banner */
 #miBanner {
     position: fixed;
     bottom: 0;
@@ -182,6 +212,7 @@ tbody td {
     transition: transform 0.3s ease;
     text-align: center;
 }
+/* Estilo para el boton */
 #miBanner button {
     background-color: #6c5ce7;
     color: #fff;
@@ -191,29 +222,35 @@ tbody td {
     border-radius: 0.3rem;
     transition: background-color 0.3s;
 }
+/* Efecto hover para el boton */
 #miBanner button:hover {
     background-color: #00cec9;
 }
 
 /* ----------------- ESTILOS PARA PANTALLAS GRANDES ------------------ */
-@media (min-width: 992px) {
+@media (min-width: 768px) {
+    /* Estilo para los subtitulos */
     .section_subtitle {
         text-align: left;
     }
+    /* Estilo para la seccion hero */
     .hero-section {
         min-height: 70vh;
     }
+    /* Estilo para el formulario */
     .form-content {
         max-width: 40rem;
     }
+    /* Estilo para las card-games */
     .card-container {
         margin-bottom: 1.875rem;
     }
 
-    /* Tabla normal en escritorio */
+    /* Estilo para mostrar el header de la tabla en escritorio */
     .table thead {
         display: table-header-group;
     }
+    /* Estilo para las filas de la tabla */
     tbody tr {
         display: table-row;
         background: none;
@@ -221,15 +258,18 @@ tbody td {
         margin: 0;
         padding: 0;
     }
+    /* Estilo para las celdas de la tabla */
     tbody td {
         display: table-cell;
         padding: 0.75rem;
     }
+    /* Estilo para la celda del nombre del juego */
     .seccion_celda__juego {
         display: flex;
         align-items: center;
         gap: .75rem;
     }
+    /* Estilo para la celda de la imagen del juego*/
     .seccion_celda__imagen {
         width: 5rem;
         height: 3rem;
