@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contacto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
@@ -12,7 +12,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar_section navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="seccion_navbar navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <i class="bi bi-joystick me-2"></i>GameEBIS
@@ -39,49 +39,48 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container hero-content">
-            <h1 class="display-4 fw-lighter mb-4">Contáctanos</h1>
-        </div>
-    </section>
+    <main class="seccion_principal">
+        <!-- Hero Section -->
+        <section class="seccion_hero">
+            <div class="container hero-content">
+                <h1 class="display-4 fw-lighter mb-4">Contáctanos</h1>
+            </div>
+        </section>
 
-    <!-- Contact Form -->
-    <section class="py-5">
-        <div class="form-content">
-            <h2 class="section_subtitle">Envíanos un mensaje</h2>
-            <form id="formulario">
-                <label class="mb-2" for="name">Nombre</label>
-                <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+        <!-- Contact Form -->
+        <section class="seccion_contacto my-5 py-5">
+            <div class="form-content">
+                <h2 class="section_subtitle">Envíanos un mensaje</h2>
+                <form id="formulario">
+                    <label class="mb-2" for="name">Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre" required>
 
-                <label class="mb-2" for="apellido">Apellidos</label>
-                <input type="text" id="apellido" name="apellido" placeholder="Tus apellidos" required>
-
-
-                <label class="mb-2" for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" placeholder="Tu email" required>
-
-                <label class="mb-2" for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono" placeholder="123-123-123"
-                    pattern="[6-9][0-9]{8}" required>
-
-                <label class="mb-2" for="password">Contraseña</label>
-                <input type="password" id="password" name="password" placeholder="********" required>
-
-                <label class="mb-2" for="edad">Edad</label>
-                <input type="number" id="edad" name="edad" placeholder="Escribe tu edad" min="0" max="100" required>
-
-                <label class="mb-2" for="message">Mensaje</label>
-                <textarea id="message" name="message" rows="6" placeholder="Escribe tu mensaje aquí"
-                    required></textarea>
-
-                <button type="submit" class="btn btn-primary btn-md px-4 me-2">Enviar</button>
-            </form>
-        </div>
-    </section>
+                    <label class="mb-2" for="apellido">Apellidos</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Tus apellidos" required>
 
 
+                    <label class="mb-2" for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Tu email" required>
 
+                    <label class="mb-2" for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="123-123-123" pattern="[6-9][0-9]{8}"
+                        required>
+
+                    <label class="mb-2" for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="********" required>
+
+                    <label class="mb-2" for="edad">Edad</label>
+                    <input type="number" id="edad" name="edad" placeholder="Escribe tu edad" min="0" max="100" required>
+
+                    <label class="mb-2" for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Escribe tu mensaje aquí"
+                        required></textarea>
+
+                    <button type="submit" class="btn btn-primary btn-md px-4 me-2">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="seccion_footer py-5">
@@ -92,8 +91,10 @@
                     <p>Tu portal definitivo para descubrir, explorar y conectar con los mejores videojuegos del mundo.
                     </p>
                     <div class="seccion_redes mt-4">
-                        <a href="https://x.com/home?lang=es" class="social-icon__twitter"><i class="bi bi-twitter"></i></a>
-                        <a href="https://www.instagram.com/" class="social-icon__instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://x.com/home?lang=es" class="social-icon__twitter"><i
+                                class="bi bi-twitter"></i></a>
+                        <a href="https://www.instagram.com/" class="social-icon__instagram"><i
+                                class="bi bi-instagram"></i></a>
                         <a href="https://www.facebook.com" class="social-icon__"><i class="bi bi-facebook"></i></a>
                         <a href="https://www.twitch.tv/" class="social-icon_-twitch"><i class="bi bi-twitch"></i></a>
                     </div>
@@ -104,7 +105,7 @@
                         <li class="mb-2"><a href="index.html" class="text-white">Inicio</a></li>
                         <li class="mb-2"><a href="ranking.html" class="text-white">Ranking</a></li>
                         <li class="mb-2"><a href="contacto.html" class="text-white">Contacto</a></li>
-                        <li><a href="cookies.html" class="text-white">Cookies y Avo Legal</a></li>
+                        <li><a href="cookies.html" class="text-white">Cookies y Aviso Legal</a></li>
                     </ul>
                 </div>
 
@@ -128,4 +129,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>

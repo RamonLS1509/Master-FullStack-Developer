@@ -14,7 +14,7 @@
 
 <body>
     <!-- Seccion navbar -->
-    <nav class="navbar_section navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="seccion_navbar navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <i class="navbar_icon bi bi-joystick me-2"></i>GameEBIS
@@ -41,8 +41,9 @@
         </div>
     </nav>
 
+    <main class="seccion_principal">
     <!--Seccion Hero -->
-    <section class="hero-section">
+    <section class="seccion_hero">
         <div class="container hero-content">
             <h1 class="display-4 fw-lighter mb-4">Descubre los mejores videojuegos</h1>
             <p class="lead mb-5">Explora, comparte y disfruta de la mejor experiencia gaming</p>
@@ -55,8 +56,7 @@
         <div class="container">
             <h2 class="section_subtitle fw-bold">Tendencias</h2>
             <div class="row" id="gameTendencia">
-
-
+                <!-- Todo el contenido de las tendencias se encuentra en el fichero script.ts -->
             </div>
         </div>
     </section>
@@ -66,18 +66,18 @@
         <div class="container">
             <h2 class="section_subtitle fw-bold">Nuevos Lanzamientos</h2>
             <div class="row" id="gameLanzamientos">
-
-
+                <!-- Todo el contenido de los nuevos lanzamientos se encuentra en el fichero script.ts -->
             </div>
         </div>
     </section>
     
 <!--  Seccion para mostrar banner de newsletter -->
-    <div id="miBanner" class="hidden-banner">
+    <div id="seccion_banner">
       <p>¡Suscríbete a nuestra newsletter!</p>
       <button onclick="toggleBanner()">Cerrar</button>
     </div>
 
+</main>
     <!-- Seccion de footer -->
     <footer class="seccion_footer py-5">
         <div class="container">
@@ -99,7 +99,7 @@
                         <li class="mb-2"><a href="index.html" class="text-white">Inicio</a></li>
                         <li class="mb-2"><a href="ranking.html" class="text-white">Ranking</a></li>
                         <li class="mb-2"><a href="contacto.html" class="text-white">Contacto</a></li>
-                        <li><a href="cookies.html" class="text-white">Cookies y Avo Legal</a></li>
+                        <li><a href="cookies.html" class="text-white">Cookies y Aviso Legal</a></li>
                     </ul>
                 </div>
 

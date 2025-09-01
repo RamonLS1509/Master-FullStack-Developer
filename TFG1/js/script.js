@@ -91,7 +91,7 @@ function rankingGames() {
         //Para crear las lista de juegos mostrando una lista enumerada del 1 al 20, el nombre y la puntuación en metacritic
         juegos.forEach(function (game, index) {
             var _a, _b;
-            var cardHTML = "\n           <tr>\n             <td class=\"seccion_celda__puesto\" data-label=\"Puesto\">".concat(index + 1, "</td>\n             <td class=\"seccion_celda__juego\" data-label=\"Juego\" class=\"text-start\">\n               <img src=\"").concat(game.background_image, "\" class=\"seccion_celda__imagen img-fluid rounded\" style=\"width:80;\">\n               <p>").concat(game.name, "</p>\n             </td>\n             <td class=\"seccion_celda__fecha\" data-label=\"Fecha de salida\">").concat(game.released, "</td>\n             <td class=\"seccion_celda__plataforma\" data-label=\"Plataformas\">").concat(((_a = game.parent_platforms) === null || _a === void 0 ? void 0 : _a.map(function (p) { return p.platform.name; }).join(', ')) || 'Sin plataforma', "</td>\n             <td class=\"seccion_celda__metacritic\" data-label=\"Metacritic\">").concat((_b = game.metacritic) !== null && _b !== void 0 ? _b : "N/A", "</td>\n           </tr>");
+            var cardHTML = "\n           <tr>\n             <td class=\"seccion_celda__puesto\" data-label=\"Puesto\">".concat(index + 1, "</td>\n             <td class=\"seccion_celda__juego\" data-label=\"Juego\" class=\"text-start\">\n               <img src=\"").concat(game.background_image, "\" class=\"seccion_celda__imagen img-fluid rounded\" style=\"width:80; alt=\"").concat(game.name, "\">\n               <p>").concat(game.name, "</p>\n             </td>\n             <td class=\"seccion_celda__fecha\" data-label=\"Fecha de salida\">").concat(game.released, "</td>\n             <td class=\"seccion_celda__plataforma\" data-label=\"Plataformas\">").concat(((_a = game.parent_platforms) === null || _a === void 0 ? void 0 : _a.map(function (p) { return p.platform.name; }).join(', ')) || 'Sin plataforma', "</td>\n             <td class=\"seccion_celda__metacritic\" data-label=\"Metacritic\">").concat((_b = game.metacritic) !== null && _b !== void 0 ? _b : "N/A", "</td>\n           </tr>");
             ranking.innerHTML += cardHTML;
         });
     })
@@ -164,7 +164,7 @@ function customMessages() {
     });
 }
 function toggleBanner() {
-    var banner = document.getElementById('miBanner');
+    var banner = document.getElementById('seccion_banner');
     if (banner) {
         banner.style.display = 'none';
     }

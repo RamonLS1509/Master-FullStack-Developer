@@ -1,11 +1,11 @@
 //Variable para recoger los juegos de la API
-let callGamesList = fetch(`https://api.rawg.io/api/games?key=5d746359116244ab9b01714c64813905`)
+const callGamesList = fetch(`https://api.rawg.io/api/games?key=5d746359116244ab9b01714c64813905`)
   .then(res => res.json());
 
 //Variables de los videojuegos
-let tendencias = document.getElementById('gameTendencia') as HTMLElement;
-let lanzamientos = document.getElementById('gameLanzamientos') as HTMLElement;
-let ranking = document.getElementById("ranking") as HTMLElement;
+const tendencias = document.getElementById('gameTendencia') as HTMLElement;
+const lanzamientos = document.getElementById('gameLanzamientos') as HTMLElement;
+const ranking = document.getElementById("ranking") as HTMLElement;
 
 //Variable para recoger el formulario
 const form = document.getElementById("formulario");
@@ -138,7 +138,7 @@ function rankingGames():void {
            <tr>
              <td class="seccion_celda__puesto" data-label="Puesto">${index + 1}</td>
              <td class="seccion_celda__juego" data-label="Juego" class="text-start">
-               <img src="${game.background_image}" class="seccion_celda__imagen img-fluid rounded" style="width:80;">
+               <img src="${game.background_image}" class="seccion_celda__imagen img-fluid rounded" style="width:80; alt="${game.name}">
                <p>${game.name}</p>
              </td>
              <td class="seccion_celda__fecha" data-label="Fecha de salida">${game.released}</td>
@@ -235,7 +235,7 @@ function customMessages():void {
 }
 
 function toggleBanner():void {
-  const banner = document.getElementById('miBanner') as HTMLElement | null;
+  const banner = document.getElementById('seccion_banner') as HTMLElement | null;
   if (banner) {
     banner.style.display = 'none';
   }
