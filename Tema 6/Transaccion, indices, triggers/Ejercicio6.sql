@@ -1,0 +1,14 @@
+DELIMITER //
+CREATE PROCEDURE mostrarUsuario( 
+    IN p_ID INT
+) 
+BEGIN 
+SELECT NOMBRE, EMAIL 
+FROM CLIENTES 
+WHERE ID = P_ID; 
+END // 
+DELIMITER ;
+
+
+
+call mostrarUsuario(1);
